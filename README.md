@@ -57,7 +57,7 @@ Accessible after login with predefined credentials.
 - **Login Protection:** Only accessible using correct username & password.
 
 **Authentication Details:**
-```plaintext
+``plaintext
 Username: admin
 Password: 123456
 
