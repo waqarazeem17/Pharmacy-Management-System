@@ -87,7 +87,7 @@ The system uses a combination of file handling and data structures for persisten
 
 **Structure Definition:**
 
-```cpp
+```
 struct meddata {
     int ID;
     int stock;
@@ -95,7 +95,7 @@ struct meddata {
     float price;
 };
 
----
+```
 
 ## 🔁 Program Flow
 
@@ -119,7 +119,7 @@ If the user selects `1` (Pharmacist), they are asked to enter credentials.
 ```plaintext
 Username: admin
 Password: 123456
-
+```
 
 🚀 How to Run the Program
 
