@@ -60,3 +60,97 @@ Accessible after login with predefined credentials.
 ```plaintext
 Username: admin
 Password: 123456
+
+---
+
+## 👥 Customer Panel
+
+**Features:**
+
+- **View Available Medicines:** Customers can view all the available medicines along with their prices and stock levels.
+- **Buy Medicines:** Customers can purchase medicines by specifying the medicine name and quantity.
+- **Receipt Generation:** After purchase, a receipt is displayed showing the medicine name, quantity, unit price, and total cost.
+- **Automatic Stock Update:** The stock is automatically updated when a customer makes a purchase.
+
+---
+
+## 🗃️ Data Management
+
+The system uses a combination of file handling and data structures for persistent and runtime data management.
+
+- **Persistent Data Storage:** The medicine data is saved in a text file named `pharmacy.txt`.
+- **In-Memory Data Structure:** A `vector` of `struct meddata` is used to store medicine data during program execution.
+- **File Operations:**
+  - On program start, `pharmacy.txt` is read to populate the vector.
+  - On adding a new medicine, the data is appended to the file.
+  - On update or deletion, the vector is updated but not the file (this can be improved in future versions).
+
+**Structure Definition:**
+
+```cpp
+struct meddata {
+    int ID;
+    int stock;
+    string name;
+    float price;
+};
+
+---
+
+## 🔁 Program Flow
+
+The Pharmacy Management System uses a **menu-driven interface** that separates functionalities for **pharmacists** and **customers**.
+
+Here is how the system flows step by step:
+
+### 1. Start Program
+- A welcome menu appears asking:
+  - `1` → Pharmacist
+  - `2` → Customer
+  - `3` → Exit
+
+---
+
+### 2. Pharmacist Panel
+
+If the user selects `1` (Pharmacist), they are asked to enter credentials.
+
+**Login Credentials:**
+```plaintext
+Username: admin
+Password: 123456
+
+
+🚀 How to Run the Program
+
+Follow these steps to run the Pharmacy Management System locally:
+🔧 Requirements:
+
+    A C++ compiler like g++, MinGW, or Turbo C++
+
+    IDEs like Code::Blocks, Dev C++, or Visual Studio Code
+
+💻 Steps:
+
+    Clone or Download the project from GitHub:
+
+git clone https://github.com/your-username/pharmacy-management-system.git
+
+Open the project folder in your preferred IDE.
+
+Open the main.cpp file.
+
+Compile the code:
+
+    If using terminal:
+
+    g++ main.cpp -o pharmacy
+    ./pharmacy
+
+    Or just click Run in your IDE.
+
+Follow the menu displayed on screen to interact with the system:
+
+    Choose Pharmacist or Customer
+
+    Perform actions like adding medicines, buying, updating stock, etc.
